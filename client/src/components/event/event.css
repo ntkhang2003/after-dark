@@ -1,0 +1,34 @@
+.event {
+    position: relative;
+    display: block;
+    width: 45%;
+    padding: 0px;
+    margin: 2%;
+    box-shadow: 0px 5px 10px 0px rgb(0, 0, 0, .5);
+    border-radius: 5px;
+}
+.event img {
+    width: 100%;
+    height: 200px;
+    border-radius: 5px 5px 0 0;
+    object-fit: cover;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+.event p {
+    color: #0d6efd;
+    font-size: 20px;
+    font-weight: bolder;
+    margin: 5px 15px;
+    right: 0;
+    position: absolute;
+}
+.event h2 {
+    margin: 5px 15px;
+    font-size: 15px;
+}
+.event h1 {
+    margin: 5px 15px;
+    font-size: 30px;
+}
