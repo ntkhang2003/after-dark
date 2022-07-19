@@ -1,10 +1,11 @@
 import React from 'react'
 import './event.css'
-const event = ({event}) => {
+const event = ({event}) => 
+    const PF = 'http://localhost:3080/images/'
     return (
         <div className='event-card'>
             <div className='event-card-top'>
-                <img className='event-img' src={event.img}/>
+                <img className='event-img' src={PF + event.img} alt="error when loading"/>
                 <div className='event-title'>{event.title}</div>
             </div>
             <div className='event-card-bottom'>
@@ -17,4 +18,4 @@ const event = ({event}) => {
         </div>
     )
 }
-export default event
+export default Event

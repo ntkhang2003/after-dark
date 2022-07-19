@@ -1,6 +1,7 @@
 import React from 'react'
 import './navbar.css'
-const navbar = () => {
+
+const Navbar = () => {
     return (
         <div className='navbar'>
             <div className='navbar-title'>After Dark</div>
@@ -15,4 +16,4 @@ const navbar = () => {
         </div>
     )
 }
-export default navbar
+export default Navbar
