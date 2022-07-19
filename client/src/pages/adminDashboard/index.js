@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import Event from '../../components/event'
+import Navbar from '../../components/navbar'
 import './adminDashboard.css'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import './adminDashboard.css'
 
 const AdminDashboard = () => {
     const [events, setEvents] = useState([])
@@ -14,11 +16,12 @@ const AdminDashboard = () => {
         fetchEvents()
     }, [events])
     return (
-        <div className='admin-dashboard'>
-            <Link to='/create'>Create new event</Link>
-            <div className='events'>
+       <div>
+            <Navbar />
+            <input className='searchbar' placeholder='Search...'/>
+            <div className='eventsList'>
                 {events.map((e) => (
-                    <Event key={e._id} event={e} />
+                    <Event key={e._id} event={e}/>
                 ))}
             </div>
         </div>
