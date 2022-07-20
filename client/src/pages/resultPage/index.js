@@ -1,24 +1,26 @@
-import React, { useState, useEffect } from 'react'
-import './userPage.css'
-import Event from '../../components/event'
+import React, { useEffect, useState } from 'react'
+import { useLocation } from "react-router-dom"
+import './resultPage.css'
 import SearchBar from '../../components/searchbar'
+import Event from '../../components/event'
 import Navbar from '../../components/navbar'
 import axios from 'axios'
 
-const UserPage = ({currentName}) => { 
+const ResultPage = () => {
     const [events, setEvents] = useState([])
+    const query = useLocation().search
     useEffect(() => {
         const fetchEvents = async () => {
-            const res = await axios.get('api/events')
+            const res = await axios.get(`api/events/search${query}`)
             setEvents(res.data)
         }
         fetchEvents()
-    }, [events])
+    }, [query])
     return (
-        <div className='user-page'>
+        <div className='result-page'>
             <Navbar />
             <SearchBar />
-            <div className='events'>
+            <div className='result-events'>
                 {events.map((e) => (
                     <Event key={e._id} event={e} />
                 ))}
@@ -26,4 +28,5 @@ const UserPage = ({currentName}) => {
         </div>
     )
 }
-export default UserPage
+
+export default ResultPage

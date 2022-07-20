@@ -49,7 +49,8 @@
     display: block;
 }
 
-.error-msg {
+.login-error {
     color: #dc3545;
     margin: 10px 0 5px 0;
+    cursor: pointer;
 }

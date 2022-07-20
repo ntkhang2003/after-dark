@@ -30,11 +30,14 @@ router.delete("/:id", async (req, res) => {
         res.status(500).json(err)
     }
 })
-//get an event by id
-router.get('/:id/edit', async (req, res)=> {
+//search event
+router.get('/search', async (req, res)=> {
+    const query = req.query.q
     try {
-        const event = await Event.findById(req.params.id)
-        res.status(200).json(event)
+        const events = await Event.find({
+            title: { $regex: query, $options: 'i'},
+        }).limit(40)
+        res.status(200).json(events)
     } catch (err) {
         res.status(500).json(err)
     }

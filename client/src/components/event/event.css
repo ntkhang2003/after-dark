@@ -1,3 +1,7 @@
+.event-wrapper {
+    position: relative;
+}
+
 .event-card {
     display: flex;
     flex-direction: column;
@@ -40,4 +44,19 @@
 .event-time, .event-dest, .event-date {
     font-size: 14px;
     color: #cacaca;
+}
+
+.event-delete {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.event-delete:hover {
+    font-size: 30px;
+    right: 5px;
+    top: 5px;
+    color: red;
 }
