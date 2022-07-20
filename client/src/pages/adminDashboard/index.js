@@ -6,7 +6,7 @@ import './adminDashboard.css'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
-const AdminDashboard = () => {
+const AdminDashboard = ({currentName}) => {
     const [events, setEvents] = useState([])
     useEffect(() => {
         const fetchEvents = async () => {

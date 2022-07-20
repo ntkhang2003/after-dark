@@ -47,5 +47,10 @@
     border-radius: 5px;
     padding: 7px 12px;
     display: block;
+}
+
+.login-error {
+    color: #dc3545;
+    margin: 10px 0 5px 0;
     cursor: pointer;
 }

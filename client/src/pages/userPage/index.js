@@ -5,7 +5,7 @@ import SearchBar from '../../components/searchbar'
 import Navbar from '../../components/navbar'
 import axios from 'axios'
 
-const UserPage = () => { 
+const UserPage = ({currentName}) => { 
     const [events, setEvents] = useState([])
     useEffect(() => {
         const fetchEvents = async () => {

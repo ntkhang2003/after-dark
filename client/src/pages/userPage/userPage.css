@@ -1,8 +1,6 @@
 .events {
-    flex: 9;
     display: flex;
     flex-wrap: wrap;
-    /* width: 100vw; */
     margin: 20px;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }

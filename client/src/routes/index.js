@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
-
 import AdminDashboard from '../pages/adminDashboard'
 import CreateEvent from '../pages/createEvent'
 import Login from '../pages/login'

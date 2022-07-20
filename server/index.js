@@ -31,6 +31,7 @@ app.post('/api/upload', upload.single('file'), (req, res) => {
 })
 app.use("/api/users", userRoute)
 app.use("/api/events", eventRoute)
+
 app.get('/', (req,res) => {
     res.send('Api running at port 3080');
 });

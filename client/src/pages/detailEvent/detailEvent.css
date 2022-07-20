@@ -1,0 +1,50 @@
+.detail-img {
+    width: 50%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.detail-card {
+    margin: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #fcfdff;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 3px 7px 2px rgb(0,0,0,0.02);
+    width: 800px;
+    height: 300px;
+}
+
+.detail-event {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.detail-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 20px 0 20px 0;
+}
+
+.detail-props {
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+.register-btn {
+    font-size: 16px;
+    background-color: #212529;
+    color: #FCFDFF;
+    border: none;
+    border-radius: 5px;
+    padding: 7px 12px;
+    margin-top: 5px;
+}
+
+
+

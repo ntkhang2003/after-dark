@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './createEvent.css'
+import Navbar from '../../components/navbar'
 import axios from 'axios'
 
 const CreateEvent = () => {
@@ -32,38 +33,47 @@ const CreateEvent = () => {
         } catch (err) {}
     }
     return (
-        <div className='create-event'>
-            <form className='form-event' onSubmit={handleSubmit}>
-                <div className='form-group'>
-                    <input 
-                        className='form-title' 
-                        type="text"  
-                        onChange={e => setTitle(e.target.value)}
-                        autoFocus={true}
-                    ></input>
-                    <input
-                        className='form-date' 
-                        type="text" 
-                        onChange={e => setDate(e.target.value)}
-                        autoFocus={true}
-                    ></input>
-                    <input
-                        className='form-time' 
-                        type="text" 
-                        onChange={e => setTime(e.target.value)}
-                        autoFocus={true}
-                    ></input>
-                    <input
-                        className='form-location' 
-                        type="text" 
-                        onChange={e => setLocation(e.target.value)}
-                        autoFocus={true}
-                    ></input>
-                    <input type='file' onChange={e => setFile(e.target.files[0])}></input>
+        <div>
+            <Navbar />
+            <div className='create-event'>
+                    <form className='form-event' onSubmit={handleSubmit}>
+                        <h1 className="page-title">Create an event</h1>
+                        <div className='form-group'>
+                            <label className='label-title'>Event title</label>
+                            <input 
+                                className='form-title' 
+                                type="text"  
+                                onChange={e => setTitle(e.target.value)}
+                                autoFocus={true}
+                            ></input>
+                            <label className='label-date'>Event date</label>
+                            <input
+                                className='form-date' 
+                                type="text" 
+                                onChange={e => setDate(e.target.value)}
+                                autoFocus={true}
+                            ></input>
+                            <label className='label-time'>Event time</label>
+                            <input
+                                className='form-time' 
+                                type="text" 
+                                onChange={e => setTime(e.target.value)}
+                                autoFocus={true}
+                            ></input>
+                            <label className='label-location'>Event location</label>
+                            <input
+                                className='form-location' 
+                                type="text" 
+                                onChange={e => setLocation(e.target.value)}
+                                autoFocus={true}
+                            ></input>
+                        </div>
+                        <label className='label-img'>Event image</label>
+                        <input type='file' onChange={e => setFile(e.target.files[0])}></input>
+                        <button className='form-btn' type="submit">Submit</button>
+                    </form>
                 </div>
-                <button className='form-btn' type="submit">Submit</button>
-            </form>
-        </div>
+            </div>
     )
 }
 export default CreateEvent

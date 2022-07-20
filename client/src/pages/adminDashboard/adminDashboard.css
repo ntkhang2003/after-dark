@@ -1,8 +1,8 @@
 .eventsList {
     display: flex;
     flex-wrap: wrap;
+    margin: 20px;
     justify-content: space-evenly;
-    padding: 20px 80px;
 }
 
 .searchbar {
