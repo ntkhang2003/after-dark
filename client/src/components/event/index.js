@@ -11,8 +11,14 @@ const Event = ({event}) => {
             await axios.delete(`/api/events/${event._id}`)
         } catch (err) {}
     }
+    const handleDetail = async () => {
+        try {
+            myStorage.setItem('eventId', event._id)
+            window.location.replace('/detail')
+        } catch (err) {}
+    }
     return (
-        <div className='event-wrapper'>
+        <div className='event-wrapper' onClick={handleDetail}>
             <div className='event-card'>
                 <div className='event-card-top'>
                     <img className='event-img' src={PF + event.img} alt="error when loading"/>

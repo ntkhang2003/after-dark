@@ -23,10 +23,14 @@ const Router = () => {
             />
             {/* <Route path='/register' element={<Register />} /> */}
             <Route path='/user' element={
-                <UserPage />} 
+                <UserPage 
+                    setCurrentUser={setCurrentUser}
+                />} 
             />
             <Route path='/admin' element={
-                <AdminDashboard />} 
+                <AdminDashboard 
+                    setCurrentUser={setCurrentUser}
+                />} 
             />
             <Route path='/create' element={<CreateEvent />} />
             <Route path='/search' element={<ResultPage />} />
