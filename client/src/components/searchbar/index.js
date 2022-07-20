@@ -13,10 +13,13 @@ const SearchBar = () => {
         <div className='search-bar'>
             <form className='search-form' on onSubmit={handleSubmit}>
                 <input
-                    placeholder='search'
+                    className='search-input'
+                    placeholder='Search...'
                     onChange={e => setQ(e.target.value)}
-                ></input>
-                <button tpye='submit' onClick={()=>navigate(`/search?q=${q}`)}>Search</button>
+                />
+                <button className='search-btn' type='submit' onClick={()=>navigate(`/search?q=${q}`)}>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
             </form>
         </div>
     )
