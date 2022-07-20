@@ -18,8 +18,8 @@ const AdminDashboard = () => {
     return (
         <div className='admin-dashboard'>
             <NavBar />
-            <Link to='/create'>Create new event</Link>
             <SearchBar />
+            <Link className='create-link' to='/create'><i class="fa-solid fa-plus"></i> Create new event</Link>
             <div className='events'>
                 {events.map((e) => (
                     <Event key={e._id} event={e} />
