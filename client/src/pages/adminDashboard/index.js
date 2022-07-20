@@ -3,10 +3,9 @@ import Event from '../../components/event'
 import Navbar from '../../components/navbar'
 import './adminDashboard.css'
 import axios from 'axios'
-import { Link } from 'react-router-dom'
 import './adminDashboard.css'
 
-const AdminDashboard = () => {
+const AdminDashboard = ({currentName}) => {
     const [events, setEvents] = useState([])
     useEffect(() => {
         const fetchEvents = async () => {
@@ -16,8 +15,11 @@ const AdminDashboard = () => {
         fetchEvents()
     }, [events])
     return (
-       <div>
-            <Navbar />
+       <div className='admin-page'>
+            <Navbar
+                currentName={currentName}
+                isAdmin={1}
+            />
             <input className='searchbar' placeholder='Search...'/>
             <div className='eventsList'>
                 {events.map((e) => (

@@ -48,3 +48,8 @@
     padding: 7px 12px;
     display: block;
 }
+
+.error-msg {
+    color: #dc3545;
+    margin: 10px 0 5px 0;
+}

@@ -1,6 +1,6 @@
 import React from 'react'
 import './event.css'
-const event = ({event}) => 
+const Event = ({event}) => {
     const PF = 'http://localhost:3080/images/'
     return (
         <div className='event-card'>
