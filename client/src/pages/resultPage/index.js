@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom"
 import './resultPage.css'
 import SearchBar from '../../components/searchbar'
 import Event from '../../components/event'
+import Navbar from '../../components/navbar'
 import axios from 'axios'
 
 const ResultPage = () => {
@@ -17,6 +18,7 @@ const ResultPage = () => {
     }, [query])
     return (
         <div className='result-page'>
+            <Navbar />
             <SearchBar />
             <div className='result-events'>
                 {events.map((e) => (

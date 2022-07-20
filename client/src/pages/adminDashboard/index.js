@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Event from '../../components/event'
 import SearchBar from '../../components/searchbar'
+import NavBar from '../../components/navbar'
 import './adminDashboard.css'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
@@ -16,6 +17,7 @@ const AdminDashboard = () => {
     }, [events])
     return (
         <div className='admin-dashboard'>
+            <NavBar />
             <Link to='/create'>Create new event</Link>
             <SearchBar />
             <div className='events'>

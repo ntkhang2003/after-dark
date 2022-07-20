@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import './userPage.css'
 import Event from '../../components/event'
-import axios from 'axios'
 import SearchBar from '../../components/searchbar'
+import Navbar from '../../components/navbar'
+import axios from 'axios'
 
 const UserPage = () => { 
     const [events, setEvents] = useState([])
@@ -15,6 +16,7 @@ const UserPage = () => {
     }, [events])
     return (
         <div className='user-page'>
+            <Navbar />
             <SearchBar />
             <div className='events'>
                 {events.map((e) => (

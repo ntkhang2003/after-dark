@@ -9,9 +9,7 @@ router.post("/login", async (req, res) => {
     if (!user) return res.status(400).json("Wrong username or password");
 
     //validate password
-    if (user.password === req.body.password) validPassword = 1
-    if (!validPassword) return res.status(400).json("Wrong username or password");
-
+    if (user.password != req.body.password) return res.status(400).json("Wrong username or password");
     //send response
     res.status(200).json({ _id: user._id, userName: user.userName, role: user.role });
   } catch (err) {

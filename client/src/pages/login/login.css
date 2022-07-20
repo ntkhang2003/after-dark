@@ -47,4 +47,5 @@
     border-radius: 5px;
     padding: 7px 12px;
     display: block;
+    cursor: pointer;
 }
