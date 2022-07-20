@@ -1,24 +1,24 @@
-import React, { useState, useEffect } from 'react'
-import Event from '../../components/event'
+import React, { useEffect, useState } from 'react'
+import { useLocation } from "react-router-dom"
+import './resultPage.css'
 import SearchBar from '../../components/searchbar'
-import './adminDashboard.css'
+import Event from '../../components/event'
 import axios from 'axios'
-import { Link } from 'react-router-dom'
 
-const AdminDashboard = () => {
+const ResultPage = () => {
     const [events, setEvents] = useState([])
+    const query = useLocation().search
     useEffect(() => {
         const fetchEvents = async () => {
-            const res = await axios.get('api/events')
+            const res = await axios.get(`api/events/search${query}`)
             setEvents(res.data)
         }
         fetchEvents()
-    }, [events])
+    }, [query])
     return (
-        <div className='admin-dashboard'>
-            <Link to='/create'>Create new event</Link>
+        <div className='result-page'>
             <SearchBar />
-            <div className='events'>
+            <div className='result-events'>
                 {events.map((e) => (
                     <Event key={e._id} event={e} />
                 ))}
@@ -26,4 +26,5 @@ const AdminDashboard = () => {
         </div>
     )
 }
-export default AdminDashboard
+
+export default ResultPage

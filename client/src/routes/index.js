@@ -6,6 +6,7 @@ import CreateEvent from '../pages/createEvent'
 import Login from '../pages/login'
 import Register from '../pages/register'
 import UserPage from '../pages/userPage'
+import ResultPage from '../pages/resultPage'
 
 const Router = () => {
     return (
@@ -15,6 +16,7 @@ const Router = () => {
             <Route path='/user' element={<UserPage />} />
             <Route path='/admin' element={<AdminDashboard />} />
             <Route path='/create' element={<CreateEvent />} />
+            <Route path='/search' element={<ResultPage />} />
         </Routes>
     )
 }
