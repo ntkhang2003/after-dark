@@ -6,6 +6,7 @@ import Login from '../pages/login'
 // import Register from '../pages/register'
 import UserPage from '../pages/userPage'
 import ResultPage from '../pages/resultPage'
+import DetailEvent from '../pages/detailEvent'
 
 const Router = () => {
     const myStorage = window.localStorage
@@ -22,17 +23,14 @@ const Router = () => {
             />
             {/* <Route path='/register' element={<Register />} /> */}
             <Route path='/user' element={
-                <UserPage 
-                    currentUser={currentUser}
-                />} 
+                <UserPage />} 
             />
             <Route path='/admin' element={
-                <AdminDashboard 
-                    currentUser={currentUser}
-                />} 
+                <AdminDashboard />} 
             />
             <Route path='/create' element={<CreateEvent />} />
             <Route path='/search' element={<ResultPage />} />
+            <Route path='/detail' element={<DetailEvent />} />
         </Routes>
     )
 }

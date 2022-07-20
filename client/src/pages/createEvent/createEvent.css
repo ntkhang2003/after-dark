@@ -8,7 +8,7 @@
 .form-event {
     display: inline-block;
     background-color: #fcfdff;
-    margin-top: 10px;
+    margin-top: 50px;
     padding: 15px 50px;
     border: none;
     border-radius: 10px;
@@ -41,6 +41,7 @@
     border-radius: 5px;
     padding: 7px 12px;
     display: block;
+    cursor: pointer;
 }
 
 .page-title {

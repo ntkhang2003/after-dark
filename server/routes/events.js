@@ -42,20 +42,17 @@ router.get('/search', async (req, res)=> {
         res.status(500).json(err)
     }
 })
-//get a post by username/place
-// router.get('/:slug', async (req, res) => {
-//     try {
-//         const decodedSlug = decodeURIComponent(req.params.slug)
-//         const post1 = await Post.find({place: decodedSlug})
-//         const post2 = await Post.find({username: decodedSlug})
-//         if (post1 != '') return res.status(200).json(post1)
-//         else if (post2 != '') return res.status(200).json(post2)
-//     } catch (err) {
-//         res.status(500).json(err)
-//     }
-// })
+//get an event by id
+router.get('/:id', async (req, res)=> {
+    try {
+        const event = await Event.findById(req.params.id)
+        res.status(200).json(event)
+    } catch (err) {
+        res.status(500).json(err)
+    }
+})
 
-//get all posts
+//get all events
 router.get("/", async (req, res) => {
     try {
         const events = await Event.find({});

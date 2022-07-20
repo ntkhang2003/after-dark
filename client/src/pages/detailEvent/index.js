@@ -3,7 +3,7 @@ import './detailEvent.css'
 import Navbar from '../../components/navbar'
 
 const DetailEvent = () => {
-    const PF = 'http://localhost:3080/images/'
+    // const PF = 'http://localhost:3080/images/'
     return (
         <div>
             <Navbar />

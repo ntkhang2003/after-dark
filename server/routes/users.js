@@ -5,12 +5,12 @@ const router = require("express").Router();
 router.post('/login', async (req, res) => {
   try {
     //find user
-    const user = await User.findOne({ userName: req.body.username });
+    const user = await User.findOne({ userName: req.body.userName });
     if (!user) return res.status(400).json("Wrong username or password!");
     //validate password
     if (user.password != req.body.password) return res.status(400).json("Wrong username or password");
     //send response
-    res.status(200).json(user);
+    res.status(200).json({ _id: user._id, userName: user.userName, role: user.role});
   } catch (err) {
     res.status(500).json(err);
   }
